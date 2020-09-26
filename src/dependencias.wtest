@@ -1,6 +1,8 @@
 import rodados.*
 import dependenciasMuni.*
 
+		///////################  ETAPA 1  #################////////
+
 test "Dependencia deportes y cultura" {
 	//dependencias
 	const deportes = new Dependencia(empleados = 45)
@@ -39,16 +41,24 @@ test "Dependencia deportes y cultura" {
 	assert.notThat(cultura.esGrande())
 	assert.equals(25, deportes.capacidadFaltante())
 	assert.equals(5, cultura.capacidadFaltante())
-	
-	
-
-
 }
 
+		///////################  ETAPA 2  #################////////
 
-
-
-
+test "Modelo de Pedidos" {
+	//escenario
+	const pedido1 = new Pedido()
+	pedido1.distanciaARecorrer(960)
+	pedido1.tiempoMax(8)
+	pedido1.cantidadDePasajeros(4)
+	pedido1.coloresIncompatibles([azul, negro])
+	const cachito = new Corsa(color = rojo)
+	
+	assert.that(pedido1.puedeSatisfacerPedido(cachito))
+	assert.equals(120, pedido1.velocidadRequerida())
+	pedido1.acelerar()
+	assert.equals(7, pedido1.tiempoMax())
+}
 
 
 

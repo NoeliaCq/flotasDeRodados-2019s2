@@ -1,5 +1,5 @@
 import dependenciasMuni.*
-
+		///////################  ETAPA 1  #################////////
 class Corsa {
 	var property color
 	
@@ -59,3 +59,5 @@ object violeta { }
 object verde { }
 object negro { }
 object beige { }
+
+		///////################  ETAPA 2  #################////////
